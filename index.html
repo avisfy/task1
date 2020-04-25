@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="assets/stylesheets/main.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+    <script src="calcsc.js" async></script>
+</head>
+
+<body>
+    <header class="container">
+        <h1>Simple calculator</h1>
+        <br>
+        <h4>This little calculator was made as a training task.</h4>
+    </header>
+    <br>
+    <section class="container">
+        <section>
+            <div class="calc">
+                <span class="inp">
+                    <input id="first" type="number" placeholder="0.0" required pattern ="\d+(\.\d{2})?">
+                </span>
+                <span class="inp">
+                    <select id="operator">
+                        <option value="plus">+</option>
+                        <option value="minus">-</option>
+                        <option value="mult">*</option>
+                        <option value="div">/</option>
+                    </select>
+                </span>
+                <span class="inp">
+                    <input type="number" id="second"  placeholder="0.0" required pattern ="\d+(\.\d{2})?" onchange="checkZero()">
+                    <span id="tip">
+                        Divizion by zero!
+                    </span>
+                </span>
+                <span style="font-size: 20px; font-weight: bold">=</span>
+                <spin class="outp">
+                    <input id="result" disabled="disabled" placeholder="result">
+                </spin>
+            </div>
+            <br>
+            <input class="btn-res" type="button" onclick="test()" value="Get result!">
+        </section>
+        <footer>
+            <small>Created by <span id="author">Ekaterina</span>&copy;, 2020.</small>
+        </footer>
+    </section>
+</body>
+
+</html>
