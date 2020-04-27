@@ -15,39 +15,51 @@
         <br>
         <h4>This little calculator was made as a training task.</h4>
     </header>
+
     <br>
-    <section class="container">
+    <div class="container">
         <section>
             <div class="calc">
-                <span class="inp">
-                    <input id="first" type="number" placeholder="0.0" required pattern ="\d+(\.\d{2})?">
+                <span class="inp1-w">
+                    <input class="inp" id="first" type="number" placeholder="0.0" required pattern="\d+(\.\d{2})?">
                 </span>
-                <span class="inp">
-                    <select id="operator">
+                <span>
+                    <select class="oper" id="operator">
                         <option value="plus">+</option>
                         <option value="minus">-</option>
                         <option value="mult">*</option>
                         <option value="div">/</option>
                     </select>
                 </span>
-                <span class="inp">
-                    <input type="number" id="second"  placeholder="0.0" required pattern ="\d+(\.\d{2})?" onchange="checkZero()">
-                    <span id="tip">
-                        Divizion by zero!
-                    </span>
+                <span class = "inp2-w">
+                    <input class="inp" id="second" type="number" placeholder="0.0" required pattern="\d+(\.\d{2})?"
+                           onchange="checkZero()">
+                    <span id="tip">Divizion by zero!</span>
                 </span>
                 <span style="font-size: 20px; font-weight: bold">=</span>
-                <spin class="outp">
-                    <input id="result" disabled="disabled" placeholder="result">
-                </spin>
+                <span class="res-w">
+                    <input class="outp" id="result" disabled="disabled" placeholder="result">
+                </span>
             </div>
-            <br>
-            <input class="btn-res" type="button" onclick="test()" value="Get result!">
         </section>
+        <section class="res">
+            <div>
+                <textarea id="history" placeholder="Operation history is empty..." disabled="disabled" rows="10"></textarea>
+            </div>
+            <div class="btns">
+                <div>
+                    <input class="btn" type="button" onclick="calculate()" value="Get result!">
+                </div>
+                <div>
+                    <input class="btn btn-clr-hide" id="btn-clr" type="button" onclick="clearHistory()" value="Clear">
+                </div>
+            </div>
+        </section>
+
         <footer>
             <small>Created by <span id="author">Ekaterina</span>&copy;, 2020.</small>
         </footer>
-    </section>
+    </div>
 </body>
 
 </html>
